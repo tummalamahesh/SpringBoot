@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost\CENTIVA2012;databaseName=Test
+    username: installer
+    password: installerPass
+  jpa:
+    generate-ddl: true
+    show-sql: true
