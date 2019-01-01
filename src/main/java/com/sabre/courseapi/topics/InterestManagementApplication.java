@@ -3,11 +3,13 @@ package com.sabre.courseapi.topics;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaRepositories(basePackageClasses=com.sabre.courseapi.topics.TopicRepository.class)
+@EnableJpaRepositories(basePackages= {"com.sabre.*"})
 @SpringBootApplication
-@EntityScan("com.sabre")
+@EntityScan(basePackages ={"com.sabre.*"})
+@ComponentScan(basePackages ={"com.sabre.*"})
 public class InterestManagementApplication {
 
 	public static void main(String[] args) {
