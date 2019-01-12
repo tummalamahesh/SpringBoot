@@ -23,9 +23,17 @@ public class InterestRowMapper implements RowMapper<InterestBean>{
 			bean.setAmount(rs.getDouble("amount"));
 			bean.setDatetime(convertSQLDateToJodaDate(rs.getDate("datetime")));
 			bean.setRate(rs.getDouble("rate"));
+			bean.setStatus(convertStatusToBoolean(rs.getInt("status")));
 			return bean;
 		}
 		
+		private boolean convertStatusToBoolean(int status) {
+			if(status == 1) {
+				return true;
+			}
+			return false;
+		}
+
 		private String convertSQLDateToJodaDate(Date date) {
 			if(date != null) {
 				DateTime time = new DateTime(date.getTime());

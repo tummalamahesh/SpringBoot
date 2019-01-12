@@ -31,7 +31,7 @@ public class InterestDaoImpl  implements InterestDao{
 		System.out.println("------------------InterestDaoImpl constructor------------");
 	}
 		
-	private static final String GET_ALL_ACTIVE_INTERESTS = "select id, name, address, amount, datetime,rate from interest where status = 1";
+	private static final String GET_ALL_ACTIVE_INTERESTS = "select id, name, address, amount, datetime,rate,status from interest where status = 1";
 	private static final String ADD_NEW_INTEREST = "insert into interest(name,address,amount,datetime,status,rate) values(?,?,?,?,?,?)";
 	private static final String GET_INTEREST_BY_ID = "select id, name, address, amount, datetime, status, rate from interest where id= ?";
 	private static final String UPDATE_INTEREST = "update interest set name = ?, address = ?, amount = ?, datetime = ?, rate = ? where id = ?";
