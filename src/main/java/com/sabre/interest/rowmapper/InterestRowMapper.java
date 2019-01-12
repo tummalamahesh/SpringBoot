@@ -22,7 +22,7 @@ public class InterestRowMapper implements RowMapper<InterestBean>{
 			bean.setAddress(rs.getString("address"));
 			bean.setAmount(rs.getDouble("amount"));
 			bean.setDatetime(convertSQLDateToJodaDate(rs.getDate("datetime")));
-			bean.setAmount(rs.getDouble("rate"));
+			bean.setRate(rs.getDouble("rate"));
 			return bean;
 		}
 		
